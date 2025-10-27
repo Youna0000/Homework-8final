@@ -71,6 +71,7 @@ function draw() {
 
  
   if (index === imgs.length - 1 && !stopped) {
+    zoom = 0.5;
     noLoop();
     stopped = true;
 
