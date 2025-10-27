@@ -45,7 +45,7 @@ function draw() {
   let nextIndex = (index + 1) % imgs.length;
 
   zoom += 0.002 * zoomDirection;
-  if (zoom > 1.55 || zoom < 0.75) zoomDirection *= -1;
+  if (zoom > 1.55 || zoom < 0.55) zoomDirection *= -1;
 
   let fade = map(time % 3000, 0, 2999, 255, 0);
 
