@@ -81,7 +81,7 @@ function draw() {
       zoomingBackIn = true;
       loop();
       stopped = false;
-    }, 5000);
+    }, 3000);
   }
 
   
