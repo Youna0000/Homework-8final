@@ -11,6 +11,7 @@ let zoom = 1;
 let stars = [];
 let currentLyric = 0;
 let stopped = false;
+let zoomingBackIn = false;
 
 function preload() {
   imgs[0] = loadImage("Idol-Image-1.JPG");
@@ -77,6 +78,7 @@ function draw() {
 
     
     setTimeout(() => {
+      zoomingBackIn = true;
       loop();
       stopped = false;
     }, 5000);
