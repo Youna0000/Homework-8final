@@ -73,10 +73,12 @@ function draw() {
   if (index === imgs.length - 1 && !stopped) {
     noLoop();
     stopped = true;
+
+    
     setTimeout(() => {
       loop();
       stopped = false;
-    }, 7000);
+    }, 5000);
   }
 
   
