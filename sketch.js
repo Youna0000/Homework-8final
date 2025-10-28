@@ -11,7 +11,6 @@ let zoom = 1;
 let stars = [];
 let currentLyric = 0;
 let stopped = false;
-let zoomingBackIn = false;
 
 function preload() {
   imgs[0] = loadImage("Idol-Image-1.JPG");
@@ -45,7 +44,7 @@ function draw() {
   let nextIndex = (index + 1) % imgs.length;
 
   zoom += 0.002 * zoomDirection;
-  if (zoom > 1.55 || zoom < 0.55) zoomDirection *= -1;
+  if (zoom > 1.55 || zoom < 0.75) zoomDirection *= -1;
 
   let fade = map(time % 3000, 0, 2999, 255, 0);
 
@@ -72,17 +71,16 @@ function draw() {
 
  
   if (index === imgs.length - 1 && !stopped) {
-    zoom = 0.5;
     noLoop();
+    zoom = 0.5;
     stopped = true;
-
     
-  
- setTimeout(() => {
+    setTimeout(() => {
       loop();
       stopped = false;
-    }, 3000);
+    }, 7000);
   }
+
   
   fill(255); 
   noStroke(0);          
@@ -97,5 +95,6 @@ function newStar() {
     size: random(1, 7),
   };
 }
+
  
 
