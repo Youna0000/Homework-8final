@@ -78,15 +78,11 @@ function draw() {
 
     
   
-function mousePressed() {
-  if (stopped) {
-    setTimeout(() => {
-      zoomingBackIn = true;
+ setTimeout(() => {
       loop();
       stopped = false;
     }, 3000);
-  } };
-
+  }
   
   fill(255); 
   noStroke(0);          
