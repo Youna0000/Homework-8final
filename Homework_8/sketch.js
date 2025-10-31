@@ -139,5 +139,7 @@ function newStar() {
     size: random(1, 7),
   };
 }
+
+
  
 
